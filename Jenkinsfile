@@ -42,7 +42,7 @@ pipeline {
                 sh 'java -jar target/demo-0.0.1-SNAPSHOT.jar' // 빌드된 JAR 파일 실행 (실제 배포 방식에 따라 수정)
             }
         }
-	*/`
+	    */
     }
 
     // 빌드 후 처리
