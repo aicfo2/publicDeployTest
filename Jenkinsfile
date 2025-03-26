@@ -1,3 +1,7 @@
+tools {
+    maven 'maven-3.9.9' // Name of the Maven installation in Jenkins
+}
+
 pipeline {
     agent any // 실행할 Jenkins 에이전트 (any는 아무 노드에서 실행 가능)
 
