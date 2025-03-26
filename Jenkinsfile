@@ -23,8 +23,7 @@ pipeline {
         // 2. 프로젝트 빌드 (Maven 기준)
         stage('Build') {
             steps {
-                sh 'chmod +x ./mvnw' // mvnw 실행 권한 부여 (필요 시)
-                sh './mvnw clean package -DskipTests' // 테스트 건너뛰고 빌드
+                sh 'mvn -Dmaven.test.failure.ignore=true -N -f ./pom.xml clean package'
             }
         }
 
