@@ -16,27 +16,27 @@ pipeline {
             }
         }
 
-        // 2. 프로젝트 빌드 (Maven 기준)
-        stage('Build') {
-            steps {
-                sh 'chmod +x ./mvnw' // mvnw 실행 권한 부여 (필요 시)
-                sh './mvnw clean package -DskipTests' // 테스트 건너뛰고 빌드
-            }
-        }
+        // // 2. 프로젝트 빌드 (Maven 기준)
+        // stage('Build') {
+        //     steps {
+        //         sh 'chmod +x ./mvnw' // mvnw 실행 권한 부여 (필요 시)
+        //         sh './mvnw clean package -DskipTests' // 테스트 건너뛰고 빌드
+        //     }
+        // }
 
-        // 3. 테스트 실행
-        stage('Test') {
-            steps {
-                sh './mvnw test' // 단위 테스트 실행
-            }
-        }
+        // // 3. 테스트 실행
+        // stage('Test') {
+        //     steps {
+        //         sh './mvnw test' // 단위 테스트 실행
+        //     }
+        // }
 
-        // 4. 배포 (예: JAR 파일 실행)
-        stage('Deploy') {
-            steps {
-                sh 'java -jar target/demo-0.0.1-SNAPSHOT.jar' // 빌드된 JAR 파일 실행 (실제 배포 방식에 따라 수정)
-            }
-        }
+        // // 4. 배포 (예: JAR 파일 실행)
+        // stage('Deploy') {
+        //     steps {
+        //         sh 'java -jar target/demo-0.0.1-SNAPSHOT.jar' // 빌드된 JAR 파일 실행 (실제 배포 방식에 따라 수정)
+        //     }
+        // }
     }
 
     // 빌드 후 처리
