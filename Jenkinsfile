@@ -9,5 +9,5 @@ pipeline {
                 sh 'java -version'
             }
         }
-    } // push test
+    } // push test2
 }
